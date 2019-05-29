@@ -15,8 +15,11 @@
 function isArray(value) {
     // YOUR CODE BELOW HERE //
     
-    
-    
+    if (Array.isArray(value)) {
+        return true;
+    } else {
+        return false;
+    }
     
     // YOUR CODE ABOVE HERE //
 }
@@ -32,8 +35,21 @@ function isArray(value) {
 function isObject(value) {
     // YOUR CODE BELOW HERE //
     
-    
-    
+    if (Array.isArray(value) === true) {
+        return false;
+    } else if (value instanceof Date) {
+        return false;
+    } else if (value === null) {
+        return false;
+    } else if (typeof value === 'number') {
+        return false;
+    } else if (typeof value === 'boolean') {
+        return false;
+    } else if (typeof value === 'string') {
+        return false;
+    } else if (typeof value === 'object') {
+        return true;
+    }
     
     // YOUR CODE ABOVE HERE //
 }
@@ -47,8 +63,21 @@ function isObject(value) {
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
     
-    
-    
+    if (Array.isArray(value) === true) {
+        return true;
+    } else if (value instanceof Date) {
+        return false;
+    } else if (value === null) {
+        return false;
+    } else if (typeof value === 'number') {
+        return false;
+    } else if (typeof value === 'boolean') {
+        return false;
+    } else if (typeof value === 'string') {
+        return false;
+    } else if (typeof value === 'object') {
+        return true;
+    }
     
     // YOUR CODE ABOVE HERE //
 }
@@ -74,9 +103,23 @@ function isCollection(value) {
  */ 
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
+    if (Array.isArray(value) === true) {
+        return 'array';
+    } else if (value instanceof Date) {
+        return 'date';
+    } else if (value === null) {
+        return 'null';
+    } else if (typeof value === 'number') {
+        return 'number';
+    } else if (typeof value === 'boolean') {
+        return 'boolean';
+    } else if (typeof value === 'string') {
+        return 'string';
+    } else if (typeof value === 'object') {
+        return 'object';
+    } else if (typeof value === 'function') {
+        return 'function';
+    }
     
     // YOUR CODE ABOVE HERE //
 }

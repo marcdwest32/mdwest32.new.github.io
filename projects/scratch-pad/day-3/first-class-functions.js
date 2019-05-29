@@ -14,8 +14,9 @@
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
     
-    
-    
+    return function(test) {
+        return test > base;
+    }
     
     // YOUR CODE ABOVE HERE //
 }
@@ -28,8 +29,9 @@ function createGreaterThanFilter(base) {
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
     
-    
-    
+    return function(test) {
+        return test < base;
+    }
     
     // YOUR CODE ABOVE HERE //
 }
@@ -42,8 +44,13 @@ function createLessThanFilter(base) {
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
     
-    
-    
+    return function(string) {
+        if (string[0].toLowerCase() === startsWith.toLowerCase()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
     
     // YOUR CODE ABOVE HERE //
 }
@@ -56,8 +63,13 @@ function createStartsWithFilter(startsWith) {
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
     
-    
-    
+    return function(string) {
+    if (string[string.length - 1].toLowerCase() === endsWith.toLowerCase()) {
+        return true;
+    } else {
+        return false;
+    }
+    }
     
     // YOUR CODE ABOVE HERE //
 }
@@ -72,9 +84,12 @@ function createEndsWithFilter(endsWith) {
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
     
-    
-    
-    
+    let result = [];
+    for (let i = 0; i < strings.length; i++) {
+        let modStrings = modify(strings[i]);
+        result.push(modStrings);
+    }
+    return result;
     // YOUR CODE ABOVE HERE //
 }
 
@@ -83,15 +98,19 @@ function modifyStrings(strings, modify) {
  * way and return a Boolean on whether it passed, return true if ALL Strings pass the test.
  * 
  * Imagine you had a list of names, and you wanted to test they all 
- * begin with "C", or they are all exclaimations that end with "!".
+ * begin with "C", or they are all exclamations that end with "!".
  * 
  * TIP: You need to loop over the Strings, right? And pass them to the test?
  */
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
     
-    
-    
+    for (let i = 0; i < strings.length; i++) {
+        if (!test(strings[i])) {
+            return false;
+        }
+    }
+    return true;
     
     // YOUR CODE ABOVE HERE //
 }

@@ -177,9 +177,9 @@ function sortAscending(stringOne, stringTwo) {
     let strings = [stringOne, stringTwo];
     strings.sort(function(x, y) {
         if (x > y) {
-            result = 1;
-        } else if (x < y) {
             result = -1;
+        } else if (x < y) {
+            result = 1;
         } else {
             result = 0;
         }
@@ -204,9 +204,9 @@ function sortDescending(stringOne, stringTwo) {
     let strings = [stringOne, stringTwo];
     strings.sort(function(x, y) {
         if (x < y) {
-            result = 1;
-        } else if (x > y) {
             result = -1;
+        } else if (x > y) {
+            result = 1;
         } else {
             result = 0;
         }
