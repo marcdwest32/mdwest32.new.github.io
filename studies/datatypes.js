@@ -6,6 +6,8 @@
 *
 *   Simple Data Types:
 *       Data Types that can only hold one value at a time
+*       When assigning or passing, simple datatypes are copied from one variable to the next
+*       Variables can directly store simple datatypes because they are a fixed size
 *
 *   0. Number
 *       Number data types are used to represent positive and negative whole numbers
@@ -60,6 +62,9 @@
 
 /*  Complex Data Types
 *       Data types that are used as containers for other data
+*       When assigning or passing, complex datatypes are copied by reference
+*       Because variables can only hold up to 8 bytes of memory and complex datatypes are
+*           not a fixed size, variables simply hold a reference to the actual complex data
 *
 *   5. Array
 *       An Array is a complex data type used to store lists of multiple data types
@@ -106,3 +111,4 @@
                 return num1 + num2; // return statement
             }
 
+   

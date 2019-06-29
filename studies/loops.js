@@ -49,9 +49,18 @@
                         console.log(myArray[i]);
                     }
                     
-                    for (var i = myArray.length-1; i > -1; i--) {   // For Loop backward over an array
+                    for (let i = 6; i <= 10; i ++) {                // For Loop forward a specific number of times
+                        myArray.push(i);
+                    }
+                    
+                    for (var i = myArray.length - 1; i > -1; i--) {   // For Loop backward over an array
                         console.log(myArray[i]);
                     }
+                    
+                    for (let i = myArray.length - 1; i >= 5; i--) {    // For Loop backward a specific number of times    
+                        myArray.pop(i);
+                    }
+                    
 /*
  *      4. For / In Loops
  *

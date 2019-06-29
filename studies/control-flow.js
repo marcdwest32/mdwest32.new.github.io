@@ -50,6 +50,7 @@
 /*  3.  Switch Statements
  *
  *      Used to check multiple If / Else If statements
+ *      Use when multiple if statements merit the same result
  *      Matches an expression value to a case and executes statements matching that case
  *      Only tests for strict equivalency
  *      Break statements should end cases to avoid unintentionally executing code
@@ -59,16 +60,17 @@
 
             switch (pet) {
               case 'cat':
-                console.log('Meowio');          // false
+              case 'dog':
+                console.log('yes');          // false
                 break;
               case 'iguana':
-                console.log('Angel');           // false
-                break;
               case 'parrot':
-                console.log('Beaker');          // false
+                console.log('no');           // false
                 break;
-              case 'dog':
-                console.log('Barkavius');       // false
+              case 'fish':
+              case 'chicken':
+              case 'cow':
+                console.log('food');       // false
                 break;
               default:
                 console.log('Wild Animal');     // defaults if nothing is true
